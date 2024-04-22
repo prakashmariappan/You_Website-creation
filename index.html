@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Shopping Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .product {
+            width: 200px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            background-color: #fff;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Clothing Store</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <button onclick="openCart()">Cart</button>
+        </nav>
+    </header>
+    <section>
+        <div class="product">
+            <img src="dress1.jpg" alt="Dress 1">
+            <h2>Dress 1</h2>
+            <p>Description of Dress 1</p>
+            <button onclick="addToCart('Dress 1')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="dress2.jpg" alt="Dress 2">
+            <h2>Dress 2</h2>
+            <p>Description of Dress 2</p>
+            <button onclick="addToCart('Dress 2')">Add to Cart</button>
+        </div>
+        <!-- Additional product cards go here -->
+    </section>
+    <footer>
+        <p>&copy; 2024 Clothing Store</p>
+    </footer>
+    <script>
+        let cart = [];
+
+        function addToCart(product) {
+            cart.push(product);
+            alert(product + ' added to cart!');
+        }
+
+        function openCart() {
+            alert('Items in cart: ' + cart.join(', '));
+        }
+    </script>
+</body>
+</html>
